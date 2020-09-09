@@ -1,40 +1,43 @@
 <div class="container">
     <div class="wrapper-opinion rounded elevation-z4 p-5">
         <div class="row">
-            <div class="col-xs-12 col-md-8 col-lg-8">
-                <h4>Queremos conocer tu opinión</h4>
+            <div class="col-xs-12 col-md-7 col-lg-7">
+                <h2 class="font-weight-light">Queremos conocer tu opinión</h2>
                 <div *ngFor="let op of opiniones">
-                    <span class="bandera" [ngClass]="{'naranja':op.estado == 1, 'verde':op.estado == 2, 'azul':op.estado == 3 }">{{op.infoEstado}}</span>
-                    <p class="titulo-opinion">{{ op.titulo }}</p>
+                    <p class="bandera mg-top-20" [ngClass]="{'naranja':op.estado == 1, 'verde':op.estado == 2, 'azul':op.estado == 3 }">{{op.infoEstado}}</p>
+                    <p class="titulo-opinion font-weight-bold line-height-1-2 pdr-10 color-secondary mg-bottom-7">{{ op.titulo }}</p>
                     <div class="row borderBox">
                         <div class="no-padding" [ngClass]="{'col-xs-6 col-md-6 col-lg-6':op.participantes !== '', 'col-xs-12 col-md-2 col-lg-12':op.participantes === ''}">
-                            <p>{{ op.entidad }}</p>
+                            <p class="mg-bottom-7">{{ op.entidad }}</p>
                         </div>
-                        <div class="no-padding" [ngClass]="{'col-xs-6 col-md-6 col-lg-6':op.participantes !== '', 'col-xs-12 col-md-2 col-lg-12':op.participantes === ''}">
-                            <p>{{ op.participantes }}</p>
+                        <div class="no-padding text-right" [ngClass]="{'col-xs-6 col-md-6 col-lg-6':op.participantes !== '', 'col-xs-12 col-md-2 col-lg-12':op.participantes === ''}">
+                            <p class="mg-bottom-7">{{ op.participantes }}</p>
                         </div>
                     </div>
                 </div>
+                <div class="container-icon">
+                    <span>Conocer otros ejercicios de participación</span>
+                    <span class="govco-icon govco-icon-right-arrow "></span>
+                </div>
             </div>
-            <div class="col-xs-12 col-md-4 col-lg-4">
-                <div class="card" style="width: 18rem;">
+            <div class="col-xs-12 col-md-5 col-lg-5">
+                <div class="card container-opinion">
                     <div class="card-body">
-                      <h5 class="card-title">CUÉNTANOS</h5>
-                      <p class="card-text">¿Cómo podemos mejorar GOV.CO?</p>
-                      <p class="card-subtitle">Estamos construyendo este espacio para ti y tu opinión nos ayuda a crecer.</p>
+                      <h3 class="card-title color-secondary font-weight-normal no-margin">Cuéntanos</h3>
+                      <p class="card-text fs-20 color-secondary">¿Cómo podemos mejorar GOV.CO?</p>
+                      <p class="card-text fs-14 color-secondary">Estamos construyendo este espacio para ti y tu opinión nos ayuda a crecer.</p>
                     </div>
-                    <div class="card-body">
+                    <div class="card-body no-padding-top no-padding-bottom">
                         <form>
                             <div class="form-group">
-                              <label for="exampleFormControlTextarea1">Escribe aquí tu opinión.</label>
-                              <textarea class="form-control" rows="5" placeholder="Escribe aquí tu opinión" id="textarea-example" maxlength="255">
+                              <textarea class="form-control textarea-tellus" rows="10" placeholder="Escribe aquí tu opinión" id="textarea-example" maxlength="300">
                             </textarea>
                             </div>
                           </form>
                     </div>
-                    <div class="card-body text-center">
+                    <div class="card-body text-center no-padding pd-bottom-15">
                         <!-- <button href="/" class="btn btn-round btn-middle">Enviar mi opinión</button> -->
-                        <button type="button" class="btn btn-outline-primary rounded-pill"></button>
+                        <button type="button" class="btn btn-opinion btn-outline-primary rounded-pill">Enviar mi opinión</button>
                     </div>
                   </div>
             </div>

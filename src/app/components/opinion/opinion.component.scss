@@ -4,18 +4,18 @@
     background: #fff;
 }
 .bandera{
-    width: 246px;
+    width: 250px;
     height: 25px;text-align: left;
     font: normal normal bold 16px/19px Montserrat;
     letter-spacing: 0px;
     color: #FFFFFF;
     text-transform: uppercase;
     opacity: 1;
-    padding: 2px 4px;
+    padding: 3px 10px;
 }
 .naranja{
     background: #F3561F 0% 0% no-repeat padding-box;
-opacity: 1;
+    opacity: 1;
 }
 .verde{
     background: #069169 0% 0% no-repeat padding-box;
@@ -26,9 +26,45 @@ opacity: 1;
     opacity: 1;
 }
 .borderBox{
-    border-bottom: 2px solid;
+    border-bottom: 2px solid #d8e3fe;
     margin: 0px;
 }
-.no-padding{
-    padding:0px;
+.container-icon{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+.color-secondary{
+    color: #0B457F;
+}
+.textarea-tellus{
+    background: #E6EFFD 0% 0% no-repeat padding-box;
+    font-size: 14px;
+}
+.textarea-tellus::placeholder{
+    opacity: 0.5;
+    color:#0B457F;
+}
+.pdr-10{padding-right:10px}
+.no-padding{padding:0px;}
+.no-padding-top{padding-top: 0;}
+.no-padding-bottom{padding-bottom: 0;}
+.pd-bottom-15{padding-bottom: 15px}
+.no-margin{margin:0px;}
+.mg-top-15{margin-top: 15px;}
+.mg-top-20{margin-top: 20px;}
+.mg-bottom-7{margin-bottom: 7px;}
+.line-height-1-2{line-height: 1.2;}
+.fs-14{font-size: 14px;}
+.fs-20{font-size: 20px;}
+.container-opinion{
+    border: 1px solid #3772FF;
+    box-shadow: 0px 3px 6px #00000029;
+}
+.btn-opinion{
+    width: 100%;
+    max-width: 255px;
+    min-height: 41px;
+    font-weight: 700;
+    text-transform: none;
 }
