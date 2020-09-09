@@ -8,15 +8,15 @@
                     <p class="titulo-opinion font-weight-bold line-height-1-2 pdr-10 color-secondary mg-bottom-7">{{ op.titulo }}</p>
                     <div class="row borderBox">
                         <div class="no-padding" [ngClass]="{'col-xs-6 col-md-6 col-lg-6':op.participantes !== '', 'col-xs-12 col-md-2 col-lg-12':op.participantes === ''}">
-                            <p class="mg-bottom-7">{{ op.entidad }}</p>
+                            <p class="mg-bottom-7 color-secondary">{{ op.entidad }}</p>
                         </div>
                         <div class="no-padding text-right" [ngClass]="{'col-xs-6 col-md-6 col-lg-6':op.participantes !== '', 'col-xs-12 col-md-2 col-lg-12':op.participantes === ''}">
-                            <p class="mg-bottom-7">{{ op.participantes }}</p>
+                            <p class="mg-bottom-7 color-secondary">{{ op.participantes }}</p>
                         </div>
                     </div>
                 </div>
                 <div class="container-icon">
-                    <span>Conocer otros ejercicios de participación</span>
+                    <a href="#" class="color-tertiary">Conocer otros ejercicios de participación</a>
                     <span class="govco-icon govco-icon-right-arrow "></span>
                 </div>
             </div>

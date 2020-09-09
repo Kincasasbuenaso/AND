@@ -5,20 +5,19 @@
             <div class="card mb-3 elevation-z4" style="max-width: 540px;">
                 <div class="row no-gutters">
                   <div class="col-md-4">
-                    <img src="..." class="card-img" alt="{{interes.image}}">
+                    <img src="{{interes.image}}" class="card-img govco-card-image govco-card-image-top" alt="{{interes.image}}">
                   </div>
                   <div class="col-md-8">
                     <div class="card-body">
-                      <h5 class="card-title">{{interes.titulo}}</h5>
-                      <p class="card-text">{{ interes.desc }}</p>
-                      <div class="container-icon">
-                        <span class="text-muted">{{ interes.linkText}}</span>                          
-                        <span class="govco-icon govco-icon-right-arrow "></span>
-                      </div>
-                          
+                      <h5 class="card-title color-tertiary fs-30 font-weight-light">{{interes.titulo}}</h5>
+                      <p class="card-text color-tertiary">{{ interes.desc }}</p>                         
                     </div>
-                  </div>
+                  </div>                  
                 </div>
+                <div class="container-icon">
+                  <a href="#" class="color-quartenary pdr-10">{{ interes.linkText}}</a>                          
+                  <span class="govco-icon govco-icon-right-arrow "></span>
+                </div> 
               </div>
         </div>
     </div>
