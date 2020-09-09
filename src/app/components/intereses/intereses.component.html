@@ -1,0 +1,25 @@
+<div class="container">
+    <h4>Otros temas de tu interés</h4>
+    <div class="row">
+        <div class="col-xs-12 col-md-6 col-lg-6" *ngFor="let interes of intereses">
+            <div class="card mb-3 elevation-z4" style="max-width: 540px;">
+                <div class="row no-gutters">
+                  <div class="col-md-4">
+                    <img src="..." class="card-img" alt="{{interes.image}}">
+                  </div>
+                  <div class="col-md-8">
+                    <div class="card-body">
+                      <h5 class="card-title">{{interes.titulo}}</h5>
+                      <p class="card-text">{{ interes.desc }}</p>
+                      <p class="card-text text-right">
+                          <small class="text-muted">{{ interes.linkText}}</small>
+                          &nbsp;
+                          <i class="fas fa-arrow-right"></i>
+                        </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+        </div>
+    </div>
+</div>

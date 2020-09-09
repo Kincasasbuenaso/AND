@@ -1,0 +1,43 @@
+<div class="container">
+    <div class="wrapper-opinion rounded elevation-z4 p-5">
+        <div class="row">
+            <div class="col-xs-12 col-md-8 col-lg-8">
+                <h4>Queremos conocer tu opinión</h4>
+                <div *ngFor="let op of opiniones">
+                    <span class="bandera" [ngClass]="{'naranja':op.estado == 1, 'verde':op.estado == 2, 'azul':op.estado == 3 }">{{op.infoEstado}}</span>
+                    <p class="titulo-opinion">{{ op.titulo }}</p>
+                    <div class="row borderBox">
+                        <div class="no-padding" [ngClass]="{'col-xs-6 col-md-6 col-lg-6':op.participantes !== '', 'col-xs-12 col-md-2 col-lg-12':op.participantes === ''}">
+                            <p>{{ op.entidad }}</p>
+                        </div>
+                        <div class="no-padding" [ngClass]="{'col-xs-6 col-md-6 col-lg-6':op.participantes !== '', 'col-xs-12 col-md-2 col-lg-12':op.participantes === ''}">
+                            <p>{{ op.participantes }}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-12 col-md-4 col-lg-4">
+                <div class="card" style="width: 18rem;">
+                    <div class="card-body">
+                      <h5 class="card-title">CUÉNTANOS</h5>
+                      <p class="card-text">¿Cómo podemos mejorar GOV.CO?</p>
+                      <p class="card-subtitle">Estamos construyendo este espacio para ti y tu opinión nos ayuda a crecer.</p>
+                    </div>
+                    <div class="card-body">
+                        <form>
+                            <div class="form-group">
+                              <label for="exampleFormControlTextarea1">Escribe aquí tu opinión.</label>
+                              <textarea class="form-control" rows="5" placeholder="Escribe aquí tu opinión" id="textarea-example" maxlength="255">
+                            </textarea>
+                            </div>
+                          </form>
+                    </div>
+                    <div class="card-body text-center">
+                        <!-- <button href="/" class="btn btn-round btn-middle">Enviar mi opinión</button> -->
+                        <button type="button" class="btn btn-outline-primary rounded-pill"></button>
+                    </div>
+                  </div>
+            </div>
+        </div>
+    </div>
+</div>

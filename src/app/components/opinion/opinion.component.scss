@@ -1,0 +1,34 @@
+.wrapper-opinion{
+    position: relative;
+    top: -60px;
+    background: #fff;
+}
+.bandera{
+    width: 246px;
+    height: 25px;text-align: left;
+    font: normal normal bold 16px/19px Montserrat;
+    letter-spacing: 0px;
+    color: #FFFFFF;
+    text-transform: uppercase;
+    opacity: 1;
+    padding: 2px 4px;
+}
+.naranja{
+    background: #F3561F 0% 0% no-repeat padding-box;
+opacity: 1;
+}
+.verde{
+    background: #069169 0% 0% no-repeat padding-box;
+    opacity: 1;
+}
+.azul{
+    background: #3772FF 0% 0% no-repeat padding-box;
+    opacity: 1;
+}
+.borderBox{
+    border-bottom: 2px solid;
+    margin: 0px;
+}
+.no-padding{
+    padding:0px;
+}
