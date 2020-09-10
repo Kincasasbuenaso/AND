@@ -28,16 +28,29 @@
                       <p class="card-text fs-14 color-secondary">Estamos construyendo este espacio para ti y tu opinión nos ayuda a crecer.</p>
                     </div>
                     <div class="card-body no-padding-top no-padding-bottom">
-                        <form>
+                        <form [formGroup]="FormOpinion">
                             <div class="form-group">
-                              <textarea class="form-control textarea-tellus" rows="10" placeholder="Escribe aquí tu opinión" id="textarea-example" maxlength="300">
+                              <textarea 
+                                formControlName="opinion"
+                                class="form-control textarea-tellus" 
+                                rows="10" 
+                                placeholder="Escribe aquí tu opinión" 
+                                id="textarea-example"
+                                required
+                                maxlength="255">
                             </textarea>
+                            <span *ngIf="!FormOpinion.controls['opinion'].valid && FormOpinion.controls['opinion'].touched" style="color:red;">
+                                Debe ingresar su opinion.*
+                            </span>
                             </div>
                           </form>
                     </div>
                     <div class="card-body text-center no-padding pd-bottom-15">
                         <!-- <button href="/" class="btn btn-round btn-middle">Enviar mi opinión</button> -->
-                        <button type="button" class="btn btn-opinion btn-outline-primary rounded-pill">Enviar mi opinión</button>
+                        <button 
+                            (click)="saveOpinion()"
+                            [disabled]="!FormOpinion.valid" 
+                            type="button" class="btn btn-opinion btn-outline-primary rounded-pill">Enviar mi opinión</button>
                     </div>
                   </div>
             </div>

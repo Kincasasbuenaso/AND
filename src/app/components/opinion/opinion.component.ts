@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { OpinionesService } from 'src/app/services/opiniones.service';
+import { FormBuilder, FormGroup, FormControl, Validators } from '@angular/forms';
+import Swal from 'sweetalert2'
 
 
 @Component({
@@ -8,32 +11,38 @@ import { Component, OnInit } from '@angular/core';
 })
 export class OpinionComponent implements OnInit {
 
-  opiniones:any = [{
-    estado:1,
-    infoEstado:'Falta un día',
-    titulo:'Únete al Pacto por Colombia!',
-    entidad:'Presidencia de la República',
-    participantes:'534 colombianos participando'
-  },
-  {
-    estado:2,
-    infoEstado:'Activo!',
-    titulo:'¿Cómo mejorarías nuestro sistema de transporte?',
-    entidad:'Secretaría de Movilidad de Bogotá',
-    participantes:'87 colombianos participando'
-  },
-  {
-    estado:3,
-    infoEstado:'Conoce los resultados',
-    titulo:'Los datos y visualizaciones del gobierno interesantes para su uso, aprovechamiento y toma de decisiones.',
-    entidad:'Ministerio de las Tecnologías de la Información y las Comunicaciones',
-    participantes:''
-  }
-]
+  opiniones:any [] =[]; 
+  FormOpinion: FormGroup;
 
-  constructor() { }
+  constructor(private _os:OpinionesService,private formBuilder:FormBuilder) { }
 
   ngOnInit(): void {
+    this.getOpiniones();
+    this.createFormOpinion();
+  }
+
+
+  getOpiniones(){
+    this._os.getOpiniones().subscribe((resp:any)=>{
+      this.opiniones = resp;
+    })
+  }
+
+  createFormOpinion(){
+    this.FormOpinion = this.formBuilder.group({
+      opinion:[null,[Validators.required,Validators.minLength(3),Validators.maxLength(255)]]
+    })
+  }
+
+  saveOpinion(){
+    Swal.fire({
+      position: 'center',
+      icon: 'success',
+      title: 'Tu opinión ha sido registrada, gracias.',
+      showConfirmButton: true,
+      timer: 3000
+    })
+    this.FormOpinion.reset();
   }
 
 }
